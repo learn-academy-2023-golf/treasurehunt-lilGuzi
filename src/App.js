@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import "./App.css"
 import Square from "./components/Square"
-
+import Reset from "./components/Reset"
 
 const App = () => {
   const [board, setBoard] = useState([
@@ -34,6 +34,12 @@ const App = () => {
     }
   }
 
+  const restart = () => {
+    let resetBoard = ["?", "?", "?", "?", "?", "?", "?", "?", "?"]
+    setBoard(resetBoard)
+    console.log(resetBoard)
+  }
+
   return (
     <>
       <h1>Treasure Hunt Game</h1>
@@ -48,6 +54,9 @@ const App = () => {
           />
           )
       })}
+      </div>
+      <div> <Reset restart={restart}/> 
+      
       </div>
     </>
   )
