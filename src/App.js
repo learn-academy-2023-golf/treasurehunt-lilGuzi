@@ -37,7 +37,6 @@ const App = () => {
   const restart = () => {
     let resetBoard = ["?", "?", "?", "?", "?", "?", "?", "?", "?"]
     setBoard(resetBoard)
-    console.log(resetBoard)
   }
 
   return (
